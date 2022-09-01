@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bkg-color: rgba(59, 74, 107, 0.4);
+    --min-color: #f0d43a;
+}
+
+body {
+    background: #fffff8;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: hidden;
+}
+
+#app {
+    display: grid;
+    grid-auto-rows: 20% 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo logo" "en co";
+    justify-content: space-evenly;
+    align-items: center;
+    grid-gap: 1em;
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    background-image: url(/image/background.jpg);
+    background-size: cover;
+    color: var(--min-color);
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+}
+.headline {
+    grid-area: logo;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: -5px -1px 0px rgb(3 140 205 / 64%);
+}
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+.addData{
+    grid-area: en;
+    position: relative;
+    padding: 20px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+}
+.zip{
+    margin: 10px;
+}
+.feel{
+    margin: 10px;
+}
+.holder {
+    font-size: 30px;
+    background-color: var(--bkg-color);
+    color: var(--min-color);
+    border-radius: 5px;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+    display: block;
+    font-size: 27px;
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+input {
+    display: block;
+    height: 60px;
+    width: 100%;
+    padding: 5px;
+    background: var(--bkg-color);
+    color: var(--min-color);
+    font-size: 20px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+}
+
+textarea {
+    background: var(--bkg-color);
+    color: var(--min-color);
+    width: 100%;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+}
+
+#generate {
+    width: 300px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--bkg-color);
+    color: var(--min-color);
+    font-size: 26px;
+    font-family: "Oswald", sans-serif;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px #444;
+    cursor: pointer;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+textarea:focus,
+#generate:hover {
+    border: 2px solid var(--min-color);
+}
+
+.entry {
+    position: absolute;
+    grid-area: co;
+    background: rgba(59, 74, 107, 0.4);
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    
+}
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+#entryHolder {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    color: aliceblue;
+    
+}
+
+#date, #temp,#country, #content {
+    margin: 10px;
+}
+
+
+
+/* Style for Placeholder Text*/
+::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: var(--min-color);
+    font-family: "Oswald", sans-serif;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--min-color);
+    font-family: "Oswald", sans-serif;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--min-color);
+    font-family: "Oswald", sans-serif;
+}
